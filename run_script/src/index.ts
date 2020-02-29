@@ -1,4 +1,4 @@
-import util from './util'
-import distribute from './distribute'
+import util from './util';
+import distribute from './distribute';
 
-export { util, distribute }
+export { util, distribute };

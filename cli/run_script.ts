@@ -1,4 +1,4 @@
-import * as script from "@jsrock/run_script"
+import * as script from '@jsrock/run_script';
 const util = script.util;
 const log = console.log;
 
@@ -10,9 +10,8 @@ const args = process.argv.slice(3);
 const cmdStr = [subCommand, ...args].join(' ');
 log(util.chalk.yellow(`ready to run: ${cmdStr}`));
 
-
 if (!script[subCommand]) {
-  log(util.chalk.redBright(`$\n\n\ncannot understand: \n${cmdStr}`));
+    log(util.chalk.redBright(`$\n\n\ncannot understand: \n${cmdStr}`));
 } else {
-  script[subCommand]();
+    script[subCommand]();
 }

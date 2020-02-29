@@ -1,0 +1,40 @@
+{
+    "name": "@jsrock/commitlint",
+    "version": "1.0.0",
+    "description": "commit code lint for jsrock",
+    "main": "index.js",
+    "author": "huange",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint ./src --ext .ts,.tsx",
+        "lint:fix": "eslint ./src --ext .ts,.tsx --fix"
+    },
+    "dependencies": {
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
+        "eslint": "^6.3.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-config-prettier": "^6.10.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "husky": "^4.2.1",
+        "lint-staged": "^10.0.7",
+        "prettier": "^1.19.1"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.ts": [
+            "prettier --write",
+            "eslint --ext .ts,.tsx --fix",
+            "git add"
+        ],
+        "src/**/*.less": [
+            "prettier --write",
+            "git add"
+        ]
+    }
+}

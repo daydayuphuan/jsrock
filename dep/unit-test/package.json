@@ -1,0 +1,13 @@
+{
+    "name": "@jsrock/unit-test",
+    "version": "0.0.1",
+    "description": "unit test dep for jsrock",
+    "license": "MIT",
+    "dependencies": {
+        "@types/jest": "^24.0.18",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.0.2",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2"
+    }
+}
